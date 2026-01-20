@@ -71,19 +71,3 @@ body {
     grid-column: span 2;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .card.wide {
-        grid-column: span 1;
-    }
-}
-
-@media (max-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
