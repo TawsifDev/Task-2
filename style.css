@@ -1,5 +1,78 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  background: linear-gradient(180deg, #1b0b2e, #2a0f45);
+  color: #ffffff;
+}
+
+.why-choose {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-choose h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  background: #2e1458;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d6cdef;
+}
+
+/* Different sizes like design */
+.card.tall {
+  grid-row: span 2;
+}
+
+.card.wide {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card.wide {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
